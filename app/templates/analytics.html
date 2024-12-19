@@ -1,0 +1,55 @@
+<!--<h1>Analytics Dashboard</h1>-->
+
+<!--<h2>Most Booked Movies</h2>-->
+<!--<ul>-->
+<!--    {% for movie in most_booked_movies %}-->
+<!--    <li>{{ movie.title }} - {{ movie.total_seats }} seats</li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+
+<!--<h2>Peak Booking Times</h2>-->
+<!--<ul>-->
+<!--    {% for time in peak_booking_times %}-->
+<!--    <li>{{ time.booking_hour }}:00 - {{ time.total_bookings }} bookings</li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+
+<!--<h2>Revenue Trends</h2>-->
+<!--<ul>-->
+<!--    {% for trend in revenue_trends %}-->
+<!--    <li>{{ trend.booking_date }} - ${{ trend.total_revenue }}</li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Analytics</title>
+</head>
+<body>
+    <h1>Analytics Dashboard</h1>
+
+    <h2>Most Booked Movies</h2>
+    <ul>
+        {% for movie in most_booked_movies %}
+        <li>{{ movie.title }} - {{ movie.total_seats }} seats</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Peak Booking Times</h2>
+    <ul>
+        {% for time in peak_booking_times %}
+        <li>{{ time.booking_hour }}:00 - {{ time.total_bookings }} bookings</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Revenue Trends</h2>
+    <ul>
+        {% for trend in revenue_trends %}
+        <li>{{ trend.booking_date }} - ${{ trend.total_revenue }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Back to Movies</a>
+</body>
+</html>
