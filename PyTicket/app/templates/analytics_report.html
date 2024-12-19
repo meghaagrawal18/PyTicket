@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Analytics</title>
+</head>
+<body>
+    <h1>Analytics Dashboard</h1>
+
+    <h2>Total Revenue</h2>
+    <p>${{ "%.2f"|format(total_revenue) }}</p>
+
+    <h2>Most Booked Movies</h2>
+    <ul>
+        {% for movie, seats in most_booked_movies.items() %}
+        <li>{{ movie }} - {{ seats }} seats</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Peak Booking Times</h2>
+    <ul>
+        {% for hour, seats in peak_booking_times.items() %}
+        <li>{{ hour }}:00 - {{ seats }} seats</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Revenue Trends</h2>
+    <ul>
+        {% for date, revenue in revenue_trends.items() %}
+        <li>{{ date }} - ${{ "%.2f"|format(revenue) }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Analytics Visualization</h2>
+    <img src="{{ url_for('static', filename='analytics_dashboard.png') }}" alt="Analytics Dashboard">
+</body>
+</html>
+
