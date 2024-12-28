@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Movie List Styles */
+.movie-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.movie-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.movie-details {
+    text-align: center;
+}
+
+.movie-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.movie-genre {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.movie-price, .movie-showtime {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.book-button {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .movie-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-item {
+        width: 90%;
+    }
+}

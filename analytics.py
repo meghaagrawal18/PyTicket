@@ -1,8 +1,7 @@
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
-from app.db_config import get_connection
+from db_config import get_connection
 
 
 class MovieTicketAnalytics:

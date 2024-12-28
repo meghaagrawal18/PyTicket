@@ -36,7 +36,7 @@
 #         return redirect(url_for('index'))  # Redirect to the home page
 #
 #     conn.close()
-#     return render_template('book_ticket.html', movie=movie)
+#     return render_template('book_tickets.html', movie=movie)
 #
 # @app.route('/analytics')
 # def analytics():
@@ -76,7 +76,7 @@
 
 from flask import render_template, request, redirect, url_for
 from app import app
-from app.db_config import get_connection
+from db_config import get_connection
 
 @app.route('/')
 def index():
