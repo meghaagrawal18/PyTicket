@@ -1,0 +1,10 @@
+<h1>Movie Ticket Booking</h1>
+<ul>
+    {% for movie in movies %}
+    <li>
+        <strong>{{ movie.title }}</strong> ({{ movie.genre }}) - ${{ movie.price }}
+        <br>Showtime: {{ movie.showtime }}
+        <br><a href="{{ url_for('book_ticket', movie_id=movie.id) }}">Book Ticket</a>
+    </li>
+    {% endfor %}
+</ul>
